@@ -55,13 +55,7 @@ namespace HomeWork_8_3
             xADDRESS.Add(xSTREET, xHOUSENUMBER, xFLATNUMBER);
             xPHONES.Add(xMOBILEPHONE, xFLATPHONE);
 
-
-
-            xPERSON.Save("_Person.xml");
-
-            List<XElement> PERSONS_List = new List<XElement>(3);
-            PERSONS_List.Add(xPERSON);
-            xPERSON.Save("_Person.xml");
+            xPERSON.Save("_Person.xml");           
                                                 
             Console.ReadKey();
 
