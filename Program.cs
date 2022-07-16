@@ -29,31 +29,31 @@ namespace HomeWork_8_3
 
             XElement xPERSON = new XElement("Person");
             XElement xADDRESS = new XElement("Address");
-            XElement xULICA = new XElement("Ulica");
-            XElement xDOM = new XElement("Dom");
-            XElement xKVART = new XElement("Kvart");
+            XElement xSTREET = new XElement("Street");
+            XElement xHOUSENUMBER = new XElement("HouseNumber");
+            XElement xFLATNUMBER = new XElement("FlatNumber");
             XElement xPHONES = new XElement("Phones");
-            XElement xMOBILN = new XElement("Mobiln");
-            XElement xDOMASHN = new XElement("Domashn");
+            XElement xMOBILEPHONE = new XElement("MobilePhone");
+            XElement xFLATPHONE = new XElement("FlatPhone");
 
             XAttribute xAtPerson = new XAttribute("Ф.И.О", person.FIO);
 
             XAttribute xMobilePhone = new XAttribute("Мобильный", person.MobilePhone);
             XAttribute xFlatPhone = new XAttribute("Домашний", person.FlatPhone);
-            xMOBILN.Add(xMobilePhone);
-            xDOMASHN.Add(xFlatPhone);
+            xMOBILEPHONE.Add(xMobilePhone);
+            xFLATPHONE.Add(xFlatPhone);
 
             XAttribute xAtUlica = new XAttribute("Улица", person.Street);
             XAttribute xAtDom = new XAttribute("Номер_дома", person.HouseNumber);
             XAttribute xAtKvartira = new XAttribute("Номер_квартиры", person.FlatNumber);
-            xULICA.Add(xAtUlica);
-            xDOM.Add(xAtDom);
-            xKVART.Add(xAtKvartira);
+            xSTREET.Add(xAtUlica);
+            xHOUSENUMBER.Add(xAtDom);
+            xFLATNUMBER.Add(xAtKvartira);
 
 
             xPERSON.Add(xADDRESS, xPHONES, xAtPerson);
-            xADDRESS.Add(xULICA, xDOM, xKVART);
-            xPHONES.Add(xMOBILN, xDOMASHN);
+            xADDRESS.Add(xSTREET, xHOUSENUMBER, xFLATNUMBER);
+            xPHONES.Add(xMOBILEPHONE, xFLATPHONE);
 
 
 
